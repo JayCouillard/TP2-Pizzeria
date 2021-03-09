@@ -51,7 +51,9 @@ class Taille{
         this.diametre = diametre;   //1:petite 2 : Moyenne 3: Grande
         this.facteur = facteur;
     }
-   
+    multiplicationFacteur(){
+        return prixAliment * facteur;
+    }
 }
 
 class Pizza extends Taille{
