@@ -91,7 +91,7 @@ class Commande extends Client{
         this.client = nom +", "+ prenom;
     }
     afficherCommande(){
-        return "Numéro de la pizza: " + this.numeroPizza + "," + " Date de la commande: " + this.dateCommande +
+        return "Nom du client: " + this.client+" Numéro de la pizza: " + this.numeroPizza + "," + " Date de la commande: " + this.dateCommande +
         "," + " Heure de la commande: " + this.heureCommande + "," + " Nombre de pizzas : " +  this.nombrePizzas +
         "," + " Montant total: " + this.montantTotal ;
         
@@ -135,6 +135,6 @@ console.log(prixPizza(croute1, fromage1, garniture1));
 console.log(multiplicationFacteur(pizza1));
 
 //test commande
-commande1 = new Commande(1, "2020-01-01", "17:30",2, null);
+commande1 = new Commande(1, "2020-01-01", "17:30",2, null,0.05, 0.0975, "Paul Paulette");
 console.log(afficherCommande(commande1));
 console.log(prixFinal(commande1));
