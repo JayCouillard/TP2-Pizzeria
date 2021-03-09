@@ -34,3 +34,19 @@ function verifierCodePostal(codePostal){
     return "Vrai";
 }
     
+//tests
+
+function testNumTelephone(entree, attendu){
+    console.log("Entrée: "+entree);                         //pour tests
+    console.log("Résultat attendu: "+ attendu);
+    console.log("Résultat obtenu: "+ verifierNumeroTelephone(entree));
+}
+testNumTelephone([2223334444] ,"Vrai");
+
+function testCodePostal(entree, attendu){
+    console.log("Entrée: "+entree);                         //pour tests
+    console.log("Résultat attendu: "+ attendu);
+    console.log("Résultat obtenu: "+ verifierCodePostal(entree));
+}
+testCodePostal("J3H1L5", "Vrai");
+testCodePostal("1s233h", "Faux");
