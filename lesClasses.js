@@ -95,7 +95,7 @@ class Commande{
         
     }
     prixFinal(){
-        return nombrePizzas * prixPizza();
+        return (nombrePizzas * prixPizza())*=(this.tps + this.tvq);
     }
 
 }
