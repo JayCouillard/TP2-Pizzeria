@@ -79,12 +79,14 @@ class Pizza extends Taille{
     } 
 }
 class Commande{
-    constructor(numeroPizza, dateCommande, heureCommande, nombrePizzas, montantTotal){
+    constructor(numeroPizza, dateCommande, heureCommande, nombrePizzas, montantTotal, tps, tvq){
         this.numeroPizza = numeroPizza;
         this.dateCommande = dateCommande;
         this.heureCommande = heureCommande;
         this.nombrePizzas = nombrePizzas;
         this.montantTotal = montantTotal;
+        this.tps = 0.05;
+        this.tvq = 0.09975;
     }
     afficherCommande(){
         return "Numéro de la pizza: " + this.numeroPizza + "," + " Date de la commande: " + this.dateCommande +
