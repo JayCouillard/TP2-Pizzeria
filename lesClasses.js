@@ -1,9 +1,10 @@
 //créations des différentes classes nécessaires pour 
 //l'entrée des caractéristiques de la(ou les) pizza désirée.
 class Aliment{
-    constructor(nomAliment,poidsAliment){
+    constructor(nomAliment,poidsAliment, prixAliment){
         this.nomAliment = nomAliment;
         this.poidsAliment= poidsAliment;
+        this.prixAliment = prixAliment;
     }
     ajouterAliment(newAliment){
         return this.nomAliment = newAliment;
@@ -44,11 +45,20 @@ class Epices extends Aliment{
 
     }
 }
+class Taille{
+    constructor(nom, diametre, facteur){
+        this.nom = nom;     
+        this.diametre = diametre;   //1:petite 2 : Moyenne 3: Grande
+        this.facteur = facteur;
+    }
+   
+}
 
-class Pizza{
+class Pizza extends Taille{
     constructor(numeroPizza, taille, croute, fromage, garniture,prixComplet, tempsCuisson){
+        super(nom, diametre, facteur)
         this.numeroPizza = numeroPizza; 
-        this.taille = taille; //1: petite 2:moyenne 3: grande
+        this.taille = this.diametre; //1: petite 2:moyenne 3: grande
         this.croute = croute;
         this.fromage = fromage;
         this.garniture = garniture;
@@ -104,17 +114,19 @@ class Client{
 }
 
 //tests pour classe Pizza
+
 croute1 = new Croute("Croute Mince",20 ,5);
 fromage1 = new Fromage("Mozzarrella",4, 10 );
 garniture1 = new Garniture("Pepperroni", 4, 5);
 epices1 = new Epices("Sel&Poivre", 0.5);
 //pizza1 = new Pizza(1, 2, "Mince", "Mozzarrella", "Pepperonni", 20, 45);
-pizza1 = new Pizza(1, 2, croute1.nomAliment, fromage1.nomAliment, garniture1.nomAliment, 20, 45);
+pizza1 = new Pizza(1,2, croute1.nomAliment, fromage1.nomAliment, garniture1.nomAliment, 20, 45);
 pizza1.afficherElements();
 console.log(pizza1.numeroPizza);
 console.log(pizza1.taille);
 console.log(pizza1.croute);
 console.log(prixPizza(croute1, fromage1, garniture1));
+
 
 //test commande
 commande1 = new Commande(1, "2020-01-01", "17:30",2, null);
