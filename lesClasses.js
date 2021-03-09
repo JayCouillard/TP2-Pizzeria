@@ -100,19 +100,19 @@ class Commande{
 
 }
 class Client{
-    constructor(nom, prenom, numeroTelephone,adresseCourriel, commande){
+    constructor(nom, prenom, numeroTelephone,adresseCourriel){
         this.nom = nom;
         this.prenom = prenom;
         this.numeroTelephone = numeroTelephone;
         this.adresseCourriel = adresseCourriel;
-        this.commande = commande;
+        
 
     }
     afficherNomComplet(){
         return "Nom Complet: " + this.prenom + " " + this.nom ;
     }
     afficherInformations(){
-        return "No Commande: "+ this.commande + "," + " Numéro de téléphone: " + this.numeroTelephone +
+        return  "Numéro de téléphone: " + this.numeroTelephone +
         "," + " Adresse courriel: " + this.adresseCourriel ;
     }
 }
