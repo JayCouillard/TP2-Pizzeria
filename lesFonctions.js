@@ -50,3 +50,13 @@ function testCodePostal(entree, attendu){
 }
 testCodePostal("J3H1L5", "Vrai");
 testCodePostal("1s233h", "Faux");
+
+
+function afficherOucacher() {
+    var element = document.getElementById("sousmenu");
+    if (element.className == "cache") {
+        element.classList.remove("cache")
+    } else {
+        element.getElementsByClassName.add("cache")
+    };
+}

@@ -74,7 +74,7 @@ class Pizza extends Taille{
     }
     prixPizza(){ 
         
-        return (this.croute.prixCroute + this.fromage.prixFromage + this.garniture.prixGarniture)*this.taille;
+        return (this.croute.prixCroute + this.fromage.prixFromage + this.garniture.prixGarniture)*this.diametre;
 
     } 
 }
