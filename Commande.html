@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        .cache {
+            display: none;
+        }
+    </style>
+    <script src="lesFonctions.js"></script>
+    <script src="lesClasses.js"></script>
+</head>
+<body>
+        <!---Menu-->
+        <a href="Commande.html">Commande</a>
+        <a href="Client.html">Client</a>
+        <a href="Pizza.html">Pizza</a>
+        <a href="#" onclick="afficherOucacher()">Aliments</a>
+        <br>
+        <div id="sousmenu" class="cache">
+            <a href="Croute.html" >Croute</a>
+            <a href="Fromage.html" >Fromage</a>
+            <a href="Garniture.html" >Garniture</a>
+        </div>
+    <h1>Commande</h1>
+    <table border = 0>
+        <tr>
+            <td> 
+                <label for="numero">Numéro:</label>
+                <input id="numero" name = "numero">
+            </td>
+           
+        </tr>
+        <tr>
+            <td>
+                <label for="client">Client:</label>
+                <select 
+                    id="client" name = "client">
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                <label for="date">Date:</label>
+                <input id="date" name = "date">
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                <label for="heure">Heure:</label>
+                <input id="heure" name = "heure">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="pizzas">Pizzas:</label>
+                <select 
+                    id="pizzas" name = "pizzas">
+                </select>
+                <button>+</button><button>-</button>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                <label for="montantTotal">Montant total:</label>
+                <input id="montantTotal" name = "montantTotal">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2"><button id="btn" type="button">Vérifier</button></td>
+
+        </tr>
+        <tr>
+            <td colspan="2"><button id="btn1" type="button">Soumettre</button></td>
+
+        </tr>
+    </table>
+</body>
+<script>
+    chargerListeSelect("client", listeClients);
+    chargerListeSelect("pizzas", listePizzas);
+    /**/
+</script>
+</html>

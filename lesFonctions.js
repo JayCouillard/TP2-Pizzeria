@@ -33,24 +33,6 @@ function verifierCodePostal(codePostal){
     else
     return "Vrai";
 }
-    
-//tests
-
-function testNumTelephone(entree, attendu){
-    console.log("Entrée: "+entree);                         //pour tests
-    console.log("Résultat attendu: "+ attendu);
-    console.log("Résultat obtenu: "+ verifierNumeroTelephone(entree));
-}
-testNumTelephone([2223334444] ,"Vrai");
-
-function testCodePostal(entree, attendu){
-    console.log("Entrée: "+entree);                         //pour tests
-    console.log("Résultat attendu: "+ attendu);
-    console.log("Résultat obtenu: "+ verifierCodePostal(entree));
-}
-testCodePostal("J3H1L5", "Vrai");
-testCodePostal("1s233h", "Faux");
-
 
 function afficherOucacher() {
     var element = document.getElementById("sousmenu");
@@ -60,3 +42,18 @@ function afficherOucacher() {
         element.getElementsByClassName.add("cache")
     };
 }
+
+/**
+* 
+* @param {string} selectId : id du select à charger 
+* @param {object} liste : liste avec les éléments
+*/
+    
+    function chargerListeSelect(selectId, liste){
+        var s = "<option></option>";
+        for(var i=0 ; i<liste.length ; i++){
+            s += '<option value="'+ i +'">'+liste[i].lireNom()+'</option>';
+        }
+        var element = document.getElementById(selectId);
+        element.innerHTML = s;
+    }   /*ne marche pas*/

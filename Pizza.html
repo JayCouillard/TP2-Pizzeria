@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="lesFonctions.js"></script>
+    <script src="lesClasses.js"></script>
+    <style>
+        .cache {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!---Menua-->
+    <a href="Commande.html">Commande</a>
+    <a href="Client.html">Client</a>
+    <a href="Pizza.html">Pizza</a>
+    <a href="#" onclick="afficherOucacher()">Aliments</a>
+    <br>
+    <div id="sousmenu" class="cache">
+        <a href="Croute.html" >Croute</a>
+        <a href="Fromage.html" >Fromage</a>
+        <a href="Garniture.html" >Garniture</a>
+    </div>
+ 
+    <h1>Pizza</h1>
+
+   <!---formulaire-->
+    <table border="0">
+
+        <tr>
+            <td><label for="numeroPizza">Numéro:</label></td>
+            <td><input id="numeroPizza" name="numeroPizza"></input></td>
+        </tr>
+
+        <tr>
+            <td><label for="taillePizza">Taille</label></td>
+            <td><select id="taillePizza" name="taillePizza">
+                <!--     <option value=0>P</option>
+                        <option value=1>M</option>
+                        <option value=2>G</option> -->
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="tailleCroute"></label>Croute</td>
+            <td><select id="tailleCroute" name = "tailleCroute">
+
+                </select>
+            </td>
+                
+        </tr>
+        <tr>
+            <td><label for="fromages"></label>Fromages</td>
+            <td><select id="fromages" name = "fromages">
+
+                </select>
+                <button>+</button><button>-</button>
+            </td>
+            
+                
+        </tr>
+        <tr>
+            <td><label for="garnitures"></label>Garnitures</td>
+            <td><select id="garnitures" name = "garnitures">
+
+                </select>
+                <button>+</button><button>-</button>
+            </td>
+                
+        </tr>
+        <tr>
+            <td><label for="tempsCuisson"></label>Temps cuisson</td>
+            <td><input id="tempsCuisson" name = "tempsCuisson">(minutes)</td>
+                
+        </tr>
+        <tr>
+            <td><label for="prixPizza"></label>Prix</td>
+            <td><input id="prixPizza" name = "prixPizza">à calculer</td>
+                
+        </tr>
+        <tr>
+            <td colspan="2"><button id="btn" type="button">Vérifier</button></td>
+
+        </tr>
+        <tr>
+            <td colspan="2"><button id="btn1" type="button">Soumettre</button></td>
+
+        </tr>
+    </table>
+</body>
+<script>
+    /*java*/
+/*     var element = document.getElementById("taillePizza");
+    var s = "";
+    for(var i=0;i<listeTailles.length;i++){
+        s+= '<option value="'+ i +'">'+listeTailles[i].lireNom()+'</option>';
+    }
+    element.innerHTML = s;  */
+    
+    chargerListeSelect("taillePizza",listeTailles);
+    chargerListeSelect("tailleCroute",listeCroutes); 
+    chargerListeSelect("fromages",listeFromages); 
+    chargerListeSelect("garnitures",listeGarnitures); 
+
+    
+    
+
+</script>
+
+</html>

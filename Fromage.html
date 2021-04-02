@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .cache {
+            display: none;
+        }
+    </style>
+    <script src="lesFonctions.js"></script>
+    <script src="lesClasses.js"></script>
+</head>
+
+<body>
+    <!---Menu-->
+    <a href="Commande.html">Commande</a>
+    <a href="Client.html">Client</a>
+    <a href="Pizza.html">Pizza</a>
+    <a href="#" onclick="afficherOucacher()">Aliments</a>
+    <br>
+    <div id="sousmenu" class="cache">
+        <a href="Croute.html" >Croute</a>
+        <a href="Fromage.html" >Fromage</a>
+        <a href="Garniture.html" >Garniture</a>
+    </div>
+
+
+
+    <!---formulaire-->
+    <h1>Fromage</h1>
+
+    <table border="0">
+        <tr>
+            <td>
+                <label for="nomFromage">Name</label>
+            </td>
+            <td><input id="nomFromage" name="nomFromage"></input></td>
+        </tr>
+        <tr>
+            <td><label for="poidsFromage">Poids:</label></td>
+            <td><input id="poidsFromage" name="poidsFromage"></input>gr.</td>
+        </tr>
+
+        <tr>
+            <td><label for="prixFromage">Prix:</label></td>
+            <td><input id="prixFromage" name="prixFromage"></input></td>
+        </tr>
+
+        <tr>
+            <td colspan="2"><button id="btn" type="button">Vérifier</button></td>
+
+        </tr>
+        <tr>
+            <td colspan="2"><button id="btn1" type="button">Soumettre</button></td>
+
+        </tr>
+    </table>
+</body>
+<script>
+
+</script>
+
+</html>
